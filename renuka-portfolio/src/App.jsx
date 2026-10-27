@@ -232,7 +232,7 @@ export default function App() {
             RA<span style={{ color: '#F07800' }}>.</span>
           </a>
           <div className="hidden md:flex gap-7 text-sm font-semibold" style={{ color: '#444' }}>
-            {['About', 'Skills', 'Experience', 'Projects', 'Achievements', 'Contact'].map(l => (
+            {['About', 'Experience', 'Projects', 'Skills', 'Achievements', 'Contact'].map(l => (
               <a key={l} href={`#${l.toLowerCase()}`} className="nav-link" style={{ color: '#444', textDecoration: 'none' }}
                 onMouseEnter={e => e.target.style.color = '#F07800'}
                 onMouseLeave={e => e.target.style.color = '#444'}
@@ -438,25 +438,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* ── Skills ───────────────────────────────────────────────── */}
-      <section id="skills" className="max-w-6xl mx-auto px-6" style={{ paddingTop: 72, paddingBottom: 72 }}>
-        <SectionHeading plain="Technical" accent="Stack" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {Object.entries(skillsData).map(([category, list]) => (
-            <div key={category} className="card" style={{ padding: 22 }}>
-              <h3
-                style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#F07800', paddingBottom: 10, borderBottom: '1.5px solid #E8DFD0', marginBottom: 14 }}
-              >
-                {category}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {list.map(skill => <SkillBadge key={skill} name={skill} />)}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* ── Experience ───────────────────────────────────────────── */}
       <section id="experience" style={{ background: '#fff', borderTop: '1.5px solid #E8DFD0', borderBottom: '1.5px solid #E8DFD0' }}>
         <div className="max-w-4xl mx-auto px-6" style={{ paddingTop: 72, paddingBottom: 72 }}>
@@ -581,6 +562,27 @@ export default function App() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ── Skills ───────────────────────────────────────────────── */}
+      <section id="skills" style={{ background: '#fff', borderTop: '1.5px solid #E8DFD0', borderBottom: '1.5px solid #E8DFD0' }}>
+        <div className="max-w-6xl mx-auto px-6" style={{ paddingTop: 72, paddingBottom: 72 }}>
+          <SectionHeading plain="Technical" accent="Stack" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {Object.entries(skillsData).map(([category, list]) => (
+              <div key={category} className="card" style={{ padding: 22 }}>
+                <h3
+                  style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#F07800', paddingBottom: 10, borderBottom: '1.5px solid #E8DFD0', marginBottom: 14 }}
+                >
+                  {category}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {list.map(skill => <SkillBadge key={skill} name={skill} />)}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
