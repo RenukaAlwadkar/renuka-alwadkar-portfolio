@@ -5,7 +5,7 @@ export const profileData = {
   batch: "Aug. 2023 – May 2027",
   cgpa: "7.72",
   tagline: "Building scalable applications, intuitive user experiences, and efficient software solutions.",
-  targetRoles: ["Software Development Engineer", "Full Stack Developer", "UI/UX Designer", "DevOps Engineer"],
+  targetRoles: ["Aspiring Software Development Engineer", "Full Stack Developer", "UI/UX Designer", "Aspiring DevOps Engineer"],
   socials: {
     github: "https://github.com/RenukaAlwadkar",
     linkedin: "https://linkedin.com/in/renuka-alwadkar",
