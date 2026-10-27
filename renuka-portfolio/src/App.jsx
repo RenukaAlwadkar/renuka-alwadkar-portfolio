@@ -26,6 +26,7 @@ const SKILL_ICONS = {
   'CSS': { icon: <SiCss />, color: '#1572B6' },
   'React': { icon: <SiReact />, color: '#22B5CC' },
   'React Native': { icon: <SiReact />, color: '#22B5CC' },
+  'React.js': { icon: <SiReact />, color: '#22B5CC' },
   'Next.js': { icon: <SiNextdotjs />, color: '#111111' },
   'Node.js': { icon: <SiNodedotjs />, color: '#339933' },
   'Express.js': { icon: <SiExpress />, color: '#444444' },
@@ -48,7 +49,7 @@ function SkillBadge({ name }) {
   return (
     <span className="skill-badge">
       {entry && (
-        <span style={{ color: entry.color, fontSize: 15, lineHeight: 1 }}>
+        <span style={{ color: entry.color, fontSize: 16, lineHeight: 1 }}>
           {entry.icon}
         </span>
       )}
@@ -101,7 +102,7 @@ function useTypewriter(phrases, { typeSpeed = 45, deleteSpeed = 22, pauseMs = 40
 function Typewriter() {
   const { text, fullText } = useTypewriter(TYPING_PHRASES);
   return (
-    <p className="font-medium mb-10 max-w-lg" style={{ color: '#0d0d0d', lineHeight: 1.7, fontSize: 15, minHeight: 90, position: 'relative' }}>
+    <p className="font-medium mb-10 max-w-lg" style={{ color: '#0d0d0d', lineHeight: 1.7, fontSize: 16, minHeight: 90, position: 'relative' }}>
       {/* Invisible full text with a hidden cursor ensures exact word-wrapping matches the visible text */}
       <span style={{ visibility: 'hidden' }}>
         {fullText}
@@ -238,7 +239,7 @@ export default function App() {
               >{l}</a>
             ))}
           </div>
-          <a href="#contact" className="btn-primary btn-shimmer" style={{ padding: '8px 20px', borderRadius: 999, fontSize: 12 }}>
+          <a href="#contact" className="btn-primary btn-shimmer" style={{ padding: '8px 20px', borderRadius: 999, fontSize: 13 }}>
             Hire Me
           </a>
         </div>
@@ -296,7 +297,7 @@ export default function App() {
 
                   <span
                     style={{
-                      fontSize: 9,
+                      fontSize: 10,
                       fontWeight: 600,
                       letterSpacing: 0.8,
                       textTransform: 'uppercase',
@@ -332,7 +333,7 @@ export default function App() {
                     border: '1.5px solid #F07800',
                     borderRadius: 999,
                     padding: '5px 14px',
-                    fontSize: 12,
+                    fontSize: 13,
                     fontWeight: 700,
                   }}
                 >
@@ -357,12 +358,14 @@ export default function App() {
               <a href={profileData.socials.linkedin} target="_blank" rel="noreferrer" className="btn-icon" title="LinkedIn">
                 <FaLinkedinIn style={{ width: 18, height: 18, color: '#0A66C2' }} />
               </a>
+              {/* 
               <a href={profileData.socials.leetcode || 'https://leetcode.com/'} target="_blank" rel="noreferrer" className="btn-icon" title="LeetCode">
                 <SiLeetcode style={{ width: 19, height: 19, color: '#FFA116' }} />
               </a>
               <a href={profileData.socials.gfg || 'https://geeksforgeeks.org/'} target="_blank" rel="noreferrer" className="btn-icon" title="GeeksforGeeks">
                 <SiGeeksforgeeks style={{ width: 20, height: 20, color: '#2F8D46' }} />
               </a>
+              */}
               <a href={`mailto:${profileData.socials.email}`} className="btn-icon" title="Email">
                 <Mail style={{ width: 20, height: 20 }} />
               </a>
@@ -384,7 +387,7 @@ export default function App() {
                 />
               </div>
             </div>
-            <div className="inline-flex items-center gap-2" style={{ background: '#fff', border: '1.5px solid #E8DFD0', borderRadius: 999, padding: '6px 14px', fontSize: 12, fontWeight: 600, color: '#666' }}>
+            <div className="inline-flex items-center gap-2" style={{ background: '#fff', border: '1.5px solid #E8DFD0', borderRadius: 999, padding: '6px 14px', fontSize: 13, fontWeight: 600, color: '#666' }}>
               <MapPin style={{ width: 13, height: 13, color: '#F07800' }} />
               Wardha, Maharashtra
             </div>
@@ -404,8 +407,8 @@ export default function App() {
               className="flex items-center gap-3 card"
               style={{ padding: '12px 14px' }}
             >
-              <span style={{ color: '#F07800', fontSize: 18 }}>{icon}</span>
-              <span style={{ fontSize: 14, fontWeight: 700, color: '#111' }}>{label}</span>
+              <span style={{ color: '#F07800', fontSize: 19 }}>{icon}</span>
+              <span style={{ fontSize: 15, fontWeight: 700, color: '#111' }}>{label}</span>
             </div>
           ))}
         </div>
@@ -415,20 +418,20 @@ export default function App() {
       <section id="about" style={{ background: '#fff', borderTop: '1.5px solid #E8DFD0', borderBottom: '1.5px solid #E8DFD0' }}>
         <div className="max-w-6xl mx-auto px-6" style={{ paddingTop: 72, paddingBottom: 72 }}>
           <SectionHeading plain="About" accent="Me" />
-          <p className="font-medium max-w-4xl" style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 40 }}>
+          <p className="font-medium max-w-4xl" style={{ color: '#555', lineHeight: 1.8, fontSize: 16, marginBottom: 40 }}>
             I am a Computer Engineering student at Bajaj Institute of Technology, Wardha (DBATU), passionate about modern software development, distributed systems, and user-centric application architecture. From winning national hackathons to designing robust web applications and containerized deployment paths, I combine functional coding standards with visual design consistency.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
               { icon: <Code2 style={{ width: 22, height: 22 }} />, title: 'Full Stack Engineering', desc: 'Designing REST APIs, schema structures, and intuitive dynamic web interfaces using modern JS frameworks and databases.' },
-              { icon: <VscTerminal style={{ fontSize: 22 }} />, title: 'DevOps & Tooling', desc: 'Utilizing Docker, Linux, Git workflows, and CI/CD concepts for reliable and repeatable software delivery.' },
+              { icon: <VscTerminal style={{ fontSize: 23 }} />, title: 'DevOps & Tooling', desc: 'Utilizing Docker, Linux, Git workflows, and CI/CD concepts for reliable and repeatable software delivery.' },
               { icon: <Layers style={{ width: 22, height: 22 }} />, title: 'UI/UX & Product Design', desc: 'Creating clean design systems in Figma and translating interactive prototypes into scalable production code.' },
               { icon: <Terminal style={{ width: 22, height: 22 }} />, title: 'Data Structures & Algorithms', desc: 'Solving computational challenges with optimized data structures, participating in coding platforms, and writing efficient logic.' },
             ].map(({ icon, title, desc }) => (
               <div key={title} className="card" style={{ padding: 24, background: '#FAF6EF' }}>
                 <span style={{ color: '#F07800', display: 'inline-block', marginBottom: 14 }}>{icon}</span>
-                <h3 style={{ fontWeight: 700, fontSize: 15, marginBottom: 8, color: '#111' }}>{title}</h3>
-                <p style={{ fontSize: 13, color: '#777', lineHeight: 1.7 }}>{desc}</p>
+                <h3 style={{ fontWeight: 700, fontSize: 16, marginBottom: 8, color: '#111' }}>{title}</h3>
+                <p style={{ fontSize: 14, color: '#777', lineHeight: 1.7 }}>{desc}</p>
               </div>
             ))}
           </div>
@@ -442,9 +445,9 @@ export default function App() {
           {Object.entries(skillsData).map(([category, list]) => (
             <div key={category} className="card" style={{ padding: 22 }}>
               <h3
-                style={{ fontSize: 10, fontWeight: 800, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#F07800', paddingBottom: 10, borderBottom: '1.5px solid #E8DFD0', marginBottom: 14 }}
+                style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#F07800', paddingBottom: 10, borderBottom: '1.5px solid #E8DFD0', marginBottom: 14 }}
               >
-                {category.replace(/([A-Z])/g, ' $1')}
+                {category}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {list.map(skill => <SkillBadge key={skill} name={skill} />)}
@@ -465,8 +468,8 @@ export default function App() {
                 {/* dot sits on the border line, to the LEFT of the text */}
                 <span style={{
                   position: 'absolute',
-                  left: -41,
-                  top: 4,
+                  left: -40,
+                  top: 5,
                   width: 14,
                   height: 14,
                   background: '#F07800',
@@ -477,30 +480,35 @@ export default function App() {
                 }} />
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 6 }}>
                   <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8 }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                      <h3 style={{ fontWeight: 800, fontSize: 17, color: '#111', margin: 0 }}>{exp.role}</h3>
+                    <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
+                      <h3 style={{ fontWeight: 800, fontSize: 18, color: '#111', margin: 0 }}>{exp.role}</h3>
                       {exp.certificate && exp.certificate !== '#' && (
-                        <button onClick={() => setViewImage(exp.certificate)} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, color: '#F07800', fontSize: 11, fontWeight: 800, display: 'inline-flex', alignItems: 'center', gap: 4, textDecoration: 'none' }} onMouseEnter={(e) => e.currentTarget.style.textDecoration = 'underline'} onMouseLeave={(e) => e.currentTarget.style.textDecoration = 'none'}>
+                        <button onClick={() => setViewImage(exp.certificate)} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, color: '#F07800', fontSize: 12, fontWeight: 800, display: 'inline-flex', alignItems: 'center', gap: 4, textDecoration: 'none' }} onMouseEnter={(e) => e.currentTarget.style.textDecoration = 'underline'} onMouseLeave={(e) => e.currentTarget.style.textDecoration = 'none'}>
                           <ExternalLink style={{ width: 12, height: 12 }} /> Certificate
                         </button>
                       )}
                       {exp.lor && exp.lor !== '#' && (
-                        <button onClick={() => setViewImage(exp.lor)} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, color: '#F07800', fontSize: 11, fontWeight: 800, display: 'inline-flex', alignItems: 'center', gap: 4, textDecoration: 'none' }} onMouseEnter={(e) => e.currentTarget.style.textDecoration = 'underline'} onMouseLeave={(e) => e.currentTarget.style.textDecoration = 'none'}>
+                        <button onClick={() => setViewImage(exp.lor)} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, color: '#F07800', fontSize: 12, fontWeight: 800, display: 'inline-flex', alignItems: 'center', gap: 4, textDecoration: 'none' }} onMouseEnter={(e) => e.currentTarget.style.textDecoration = 'underline'} onMouseLeave={(e) => e.currentTarget.style.textDecoration = 'none'}>
                           <ExternalLink style={{ width: 12, height: 12 }} /> Letter of Recommendation
                         </button>
                       )}
+                      {exp.link && (
+                        <a href={exp.link} target="_blank" rel="noreferrer" style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, color: '#F07800', fontSize: 12, fontWeight: 800, display: 'inline-flex', alignItems: 'center', gap: 4, textDecoration: 'none' }} onMouseEnter={(e) => e.currentTarget.style.textDecoration = 'underline'} onMouseLeave={(e) => e.currentTarget.style.textDecoration = 'none'}>
+                          <ExternalLink style={{ width: 12, height: 12 }} /> Live Link
+                        </a>
+                      )}
                     </div>
-                    <span style={{ background: '#FFF1E0', color: '#F07800', border: '1.5px solid #F07800', borderRadius: 999, padding: '4px 12px', fontSize: 11, fontWeight: 700, whiteSpace: 'nowrap', flexShrink: 0 }}>
+                    <span style={{ background: '#FFF1E0', color: '#F07800', border: '1.5px solid #F07800', borderRadius: 999, padding: '4px 12px', fontSize: 12, fontWeight: 700, whiteSpace: 'nowrap', flexShrink: 0 }}>
                       {exp.period}
                     </span>
                   </div>
-                  <p style={{ fontSize: 11, fontWeight: 700, color: '#888', textTransform: 'uppercase', letterSpacing: '0.08em', margin: 0 }}>
+                  <p style={{ fontSize: 12, fontWeight: 700, color: '#888', textTransform: 'uppercase', letterSpacing: '0.08em', margin: 0 }}>
                     {exp.company} &nbsp;·&nbsp; {exp.location}
                   </p>
                 </div>
                 <ul style={{ display: 'flex', flexDirection: 'column', gap: 8, margin: 0, padding: 0, listStyle: 'none' }}>
                   {exp.points.map((pt, pIdx) => (
-                    <li key={pIdx} style={{ fontSize: 14, color: '#555', display: 'flex', alignItems: 'flex-start', gap: 10, lineHeight: 1.6 }}>
+                    <li key={pIdx} style={{ fontSize: 15, color: '#555', display: 'flex', alignItems: 'flex-start', gap: 10, lineHeight: 1.6 }}>
                       <span style={{ width: 6, height: 6, background: '#F07800', borderRadius: '50%', marginTop: 7, flexShrink: 0 }} />
                       {pt}
                     </li>
@@ -515,7 +523,7 @@ export default function App() {
       {/* ── Projects ─────────────────────────────────────────────── */}
       <section id="projects" className="max-w-6xl mx-auto px-6" style={{ paddingTop: 72, paddingBottom: 72 }}>
         <SectionHeading plain="Featured" accent="Projects" />
-        <p style={{ fontSize: 14, color: '#888', marginTop: -20, marginBottom: 36, fontWeight: 500 }}>
+        <p style={{ fontSize: 15, color: '#888', marginTop: -20, marginBottom: 36, fontWeight: 500 }}>
           Click any card to view the full case study.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -528,7 +536,7 @@ export default function App() {
             >
               <div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                  <span style={{ background: '#FFF1E0', color: '#F07800', border: '1.5px solid #F07800', borderRadius: 999, padding: '3px 10px', fontSize: 10, fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+                  <span style={{ background: '#FFF1E0', color: '#F07800', border: '1.5px solid #F07800', borderRadius: 999, padding: '3px 10px', fontSize: 11, fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase' }}>
                     {project.badge}
                   </span>
                   {project.demo && project.demo !== '#' && (
@@ -537,7 +545,7 @@ export default function App() {
                       target="_blank"
                       rel="noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      style={{ background: '#F07800', color: '#FFF', borderRadius: 999, padding: '4px 10px', fontSize: 10, fontWeight: 800, letterSpacing: '0.05em', textTransform: 'uppercase', display: 'flex', alignItems: 'center', gap: 4, textDecoration: 'none', boxShadow: '0 2px 4px rgba(240, 120, 0, 0.2)' }}
+                      style={{ background: '#F07800', color: '#FFF', borderRadius: 999, padding: '4px 10px', fontSize: 11, fontWeight: 800, letterSpacing: '0.05em', textTransform: 'uppercase', display: 'flex', alignItems: 'center', gap: 4, textDecoration: 'none', boxShadow: '0 2px 4px rgba(240, 120, 0, 0.2)' }}
                       onMouseEnter={(e) => e.currentTarget.style.opacity = '0.85'}
                       onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
                     >
@@ -545,10 +553,10 @@ export default function App() {
                     </a>
                   )}
                 </div>
-                <h3 style={{ fontWeight: 800, fontSize: 16, color: '#111', marginTop: 14, marginBottom: 8, lineHeight: 1.35 }}>
+                <h3 style={{ fontWeight: 800, fontSize: 17, color: '#111', marginTop: 14, marginBottom: 8, lineHeight: 1.35 }}>
                   {project.title}
                 </h3>
-                <p style={{ fontSize: 13, color: '#777', lineHeight: 1.65, marginBottom: 16 }} className="line-clamp-3">
+                <p style={{ fontSize: 14, color: '#777', lineHeight: 1.65, marginBottom: 16 }} className="line-clamp-3">
                   {project.shortDesc}
                 </p>
               </div>
@@ -557,17 +565,17 @@ export default function App() {
                   {project.tech.slice(0, 3).map((t, i) => {
                     const entry = SKILL_ICONS[t];
                     return (
-                      <span key={i} style={{ background: '#FAF6EF', border: '1.5px solid #E8DFD0', borderRadius: 6, padding: '3px 9px', fontSize: 11, fontWeight: 600, color: '#555', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
-                        {entry && <span style={{ color: entry.color, fontSize: 12 }}>{entry.icon}</span>}
+                      <span key={i} style={{ background: '#FAF6EF', border: '1.5px solid #E8DFD0', borderRadius: 6, padding: '3px 9px', fontSize: 12, fontWeight: 600, color: '#555', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                        {entry && <span style={{ color: entry.color, fontSize: 13 }}>{entry.icon}</span>}
                         {t}
                       </span>
                     );
                   })}
                   {project.tech.length > 3 && (
-                    <span style={{ fontSize: 11, color: '#AAA', fontWeight: 500, alignSelf: 'center' }}>+{project.tech.length - 3}</span>
+                    <span style={{ fontSize: 12, color: '#AAA', fontWeight: 500, alignSelf: 'center' }}>+{project.tech.length - 3}</span>
                   )}
                 </div>
-                <button style={{ background: 'none', border: 'none', padding: 0, color: '#F07800', fontWeight: 700, fontSize: 12, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
+                <button style={{ background: 'none', border: 'none', padding: 0, color: '#F07800', fontWeight: 700, fontSize: 13, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
                   Case Study <ArrowRight style={{ width: 13, height: 13 }} />
                 </button>
               </div>
@@ -583,16 +591,16 @@ export default function App() {
             <SectionHeading plain="Key" accent="Achievements" />
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               {[
-                { title: 'Smart India Hackathon 2025 Winner', desc: 'Secured 1st place nationally for developing Vrikshamitra, an eco-gamification platform.', icon: <FaTrophy /> },
-                { title: 'Smart India Hackathon 2024 Finalist', desc: 'Shortlisted nationally for creating an automated faculty career advancement web portal.', icon: <FaMedal /> },
-                { title: 'Aspen National Leadership Fellowship', desc: 'Selected for leadership development and values-based civic action mentorship.', icon: <FaGraduationCap /> },
+                { title: 'Smart India Hackathon 2025 Winner', desc: 'Dec 2025 - Secured 1st place nationally for developing Vrikshamitra, an eco-gamification platform.', icon: <FaTrophy /> },
+                { title: 'Smart India Hackathon 2024 Finalist', desc: 'Dec 2024 - Shortlisted nationally for creating an automated faculty career advancement web portal.', icon: <FaMedal /> },
+                { title: 'ASPEN National Leadership Fellowship', desc: 'Oct 2024 - Selected for leadership development and values-based civic action mentorship.', icon: <FaGraduationCap /> },
               ].map(({ title, desc, icon }) => (
                 <div key={title} className="card" style={{ padding: 18, borderLeft: '3px solid #F07800', borderRadius: 10 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
-                    <span style={{ color: '#F07800', fontSize: 14 }}>{icon}</span>
-                    <h4 style={{ fontWeight: 800, fontSize: 13, color: '#111' }}>{title}</h4>
+                    <span style={{ color: '#F07800', fontSize: 15 }}>{icon}</span>
+                    <h4 style={{ fontWeight: 800, fontSize: 14, color: '#111' }}>{title}</h4>
                   </div>
-                  <p style={{ fontSize: 12, color: '#777', lineHeight: 1.65, paddingLeft: 22 }}>{desc}</p>
+                  <p style={{ fontSize: 13, color: '#777', lineHeight: 1.65, paddingLeft: 22 }}>{desc}</p>
                 </div>
               ))}
             </div>
@@ -600,16 +608,16 @@ export default function App() {
 
           <div>
             <SectionHeading plain="Leadership" accent="Roles" />
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 gap-3">
               {[
-                { title: 'Editor-in-Chief', sub: 'College Magazine Board, BITW' },
-                { title: 'UI/UX Lead', sub: 'Google Developer Groups BITW' },
-                { title: 'Core Member', sub: "Readers' Club BITW" },
-                { title: 'NSS Volunteer', sub: 'National Service Scheme' },
+                { title: 'UI/UX Lead (Google Developer Groups BITW)', sub: 'Led UI/UX initiatives, managed design tasks, and mentored members on wireframing and prototyping.' },
+                { title: 'Editor-in-Chief (College Magazine Editorial Board)', sub: 'Planned content, coordinated editors, and oversaw publication.' },
+                { title: "Core Member (Readers' Club BITW)", sub: 'Organized discussions and promoted collaborative learning.' },
+                { title: 'Volunteer (National Service Scheme - NSS)', sub: 'Contributed to community service and outreach initiatives.' },
               ].map(({ title, sub }) => (
                 <div key={title} className="card" style={{ padding: 16, background: '#FAF6EF' }}>
-                  <h4 style={{ fontWeight: 700, fontSize: 13, color: '#111', marginBottom: 3 }}>{title}</h4>
-                  <p style={{ fontSize: 11, color: '#888' }}>{sub}</p>
+                  <h4 style={{ fontWeight: 700, fontSize: 14, color: '#111', marginBottom: 3 }}>{title}</h4>
+                  <p style={{ fontSize: 12, color: '#888' }}>{sub}</p>
                 </div>
               ))}
             </div>
@@ -623,47 +631,47 @@ export default function App() {
           {/* Education */}
           <div className="card" style={{ padding: 26 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
-              <FaGraduationCap style={{ fontSize: 20, color: '#F07800' }} />
-              <h3 style={{ fontWeight: 800, fontSize: 16, color: '#111' }}>Education</h3>
+              <FaGraduationCap style={{ fontSize: 21, color: '#F07800' }} />
+              <h3 style={{ fontWeight: 800, fontSize: 17, color: '#111' }}>Education</h3>
             </div>
-            <h4 style={{ fontWeight: 700, fontSize: 15, color: '#111' }}>B.Tech in Computer Engineering</h4>
-            <p style={{ fontSize: 12, color: '#888', marginTop: 3, marginBottom: 10, fontWeight: 500 }}>
+            <h4 style={{ fontWeight: 700, fontSize: 16, color: '#111' }}>B.Tech in Computer Engineering</h4>
+            <p style={{ fontSize: 13, color: '#888', marginTop: 3, marginBottom: 10, fontWeight: 500 }}>
               {profileData.institution} (2023–2027)
             </p>
-            <span style={{ background: '#FFF1E0', color: '#F07800', border: '1.5px solid #F07800', borderRadius: 6, padding: '4px 10px', fontSize: 12, fontWeight: 700, display: 'inline-block', marginBottom: 14 }}>
+            <span style={{ background: '#FFF1E0', color: '#F07800', border: '1.5px solid #F07800', borderRadius: 6, padding: '4px 10px', fontSize: 13, fontWeight: 700, display: 'inline-block', marginBottom: 14 }}>
               CGPA: {profileData.cgpa}
             </span>
-            <p style={{ fontSize: 12, color: '#777', lineHeight: 1.7 }}>
-              Coursework: Data Structures, Operating Systems, DBMS, Computer Networks, Software Engineering.
+            <p style={{ fontSize: 13, color: '#777', lineHeight: 1.7 }}>
+              Coursework: Data Structures, Operating Systems, DBMS, Computer Networks, Software Engineering, Machine Learning, Theory of Computation, Digital Logic Design (DLDM), Discrete Maths, Design Thinking, Cloud Computing, Artificial Intelligence, Compiler Design, Probability & Statistics.
             </p>
           </div>
 
           {/* Certifications */}
           <div className="card" style={{ padding: 26 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
-              <FaTrophy style={{ fontSize: 18, color: '#F07800' }} />
-              <h3 style={{ fontWeight: 800, fontSize: 16, color: '#111' }}>Certifications</h3>
+              <FaTrophy style={{ fontSize: 19, color: '#F07800' }} />
+              <h3 style={{ fontWeight: 800, fontSize: 17, color: '#111' }}>Certifications</h3>
             </div>
             <ul>
               {[
-
-                { name: 'Programming in Java', issuer: 'NPTEL', cert: 'Programming in Java.pdf' },
-                { name: 'Cyber Smart AI Prime', issuer: 'Cisco & NIIT Foundation', cert: '/cybersecurity internship certificate.pdf' },
-
+                { name: 'Programming in Java', issuer: 'NPTEL Online Certification', cert: 'Programming in Java.pdf' },
+                { name: 'Internship in Cyber Smart AI Prime', issuer: 'Cyber Suraksha Plus Program, NIFT Foundation', cert: '/cybersecurity internship certificate.pdf' },
                 { name: 'Cybersecurity Essentials', issuer: 'Cisco Networking Academy', cert: '/cybersecurity.pdf' },
                 { name: 'Career Essentials in Software Development', issuer: 'Microsoft and LinkedIn', cert: '/microsoft certi.pdf' },
                 { name: 'Python Essentials', issuer: 'Cisco Networking Academy', cert: '#' }
               ].map(({ name, issuer, cert }) => (
-                <li key={name} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 13, paddingBottom: 10, marginBottom: 10, borderBottom: '1px solid #F0EBE0' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                    <span style={{ fontWeight: 700, color: '#111' }}>{name}</span>
-                    {cert && cert !== '#' && (
-                      <button onClick={() => setViewImage(cert)} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, color: '#F07800', fontSize: 11, fontWeight: 800, display: 'inline-flex', alignItems: 'center', gap: 4, textDecoration: 'none' }} onMouseEnter={(e) => e.currentTarget.style.textDecoration = 'underline'} onMouseLeave={(e) => e.currentTarget.style.textDecoration = 'none'}>
-                        <ExternalLink style={{ width: 12, height: 12 }} /> Certificate
-                      </button>
-                    )}
+                <li key={name} style={{ display: 'flex', flexDirection: 'column', gap: 6, fontSize: 14, paddingBottom: 12, marginBottom: 12, borderBottom: '1px solid #F0EBE0' }}>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 10, justifyContent: 'space-between' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+                      <span style={{ fontWeight: 700, color: '#111' }}>{name}</span>
+                      {cert && cert !== '#' && (
+                        <button onClick={() => setViewImage(cert)} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, color: '#F07800', fontSize: 12, fontWeight: 800, display: 'inline-flex', alignItems: 'center', gap: 4, textDecoration: 'none', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.currentTarget.style.textDecoration = 'underline'} onMouseLeave={(e) => e.currentTarget.style.textDecoration = 'none'}>
+                          <ExternalLink style={{ width: 12, height: 12 }} /> Certificate
+                        </button>
+                      )}
+                    </div>
+                    <span style={{ fontSize: 12, color: '#999', fontWeight: 500, textAlign: 'right' }}>{issuer}</span>
                   </div>
-                  <span style={{ fontSize: 11, color: '#999', fontWeight: 500 }}>{issuer}</span>
                 </li>
               ))}
             </ul>
@@ -678,7 +686,7 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Info */}
             <div>
-              <p style={{ fontSize: 14, color: '#666', lineHeight: 1.8, marginBottom: 28, fontWeight: 500 }}>
+              <p style={{ fontSize: 15, color: '#666', lineHeight: 1.8, marginBottom: 28, fontWeight: 500 }}>
                 Open for Software Engineering, Full Stack, and DevOps internships or full-time roles. Feel free to reach out.
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
@@ -692,7 +700,7 @@ export default function App() {
                     href={href}
                     target={href.startsWith('mailto') ? undefined : '_blank'}
                     rel="noreferrer"
-                    style={{ display: 'flex', alignItems: 'center', gap: 12, fontSize: 14, fontWeight: 600, color: '#444', textDecoration: 'none' }}
+                    style={{ display: 'flex', alignItems: 'center', gap: 12, fontSize: 15, fontWeight: 600, color: '#444', textDecoration: 'none' }}
                     onMouseEnter={e => e.currentTarget.style.color = '#F07800'}
                     onMouseLeave={e => e.currentTarget.style.color = '#444'}
                   >
@@ -727,12 +735,12 @@ export default function App() {
                 <Send style={{ width: 15, height: 15 }} /> {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
               {formSubmitted && (
-                <p style={{ textAlign: 'center', fontSize: 13, fontWeight: 700, color: '#2D8B4E' }}>
+                <p style={{ textAlign: 'center', fontSize: 14, fontWeight: 700, color: '#2D8B4E' }}>
                   ✓ Message sent successfully!
                 </p>
               )}
               {submitError && (
-                <p style={{ textAlign: 'center', fontSize: 13, fontWeight: 700, color: '#D32F2F' }}>
+                <p style={{ textAlign: 'center', fontSize: 14, fontWeight: 700, color: '#D32F2F' }}>
                   {submitError}
                 </p>
               )}
@@ -742,7 +750,7 @@ export default function App() {
       </section>
 
       {/* ── Footer ───────────────────────────────────────────────── */}
-      <footer style={{ background: '#111111', color: '#666', textAlign: 'center', padding: '20px 24px', fontSize: 12, fontWeight: 600 }}>
+      <footer style={{ background: '#111111', color: '#666', textAlign: 'center', padding: '20px 24px', fontSize: 13, fontWeight: 600 }}>
         Crafted by <span style={{ color: '#F07800', fontWeight: 800 }}>Renuka Alwadkar</span> · {new Date().getFullYear()}
       </footer>
 

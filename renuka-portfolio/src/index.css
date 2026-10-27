@@ -13,7 +13,7 @@ body {
   background: #FAF6EF;
   color: #111111;
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.65;
   letter-spacing: -0.01em;
 }
@@ -74,7 +74,7 @@ body {
   border: 1.5px solid #E8DFD0;
   border-radius: 8px;
   padding: 5px 11px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   color: #111111;
   cursor: default;
@@ -101,7 +101,7 @@ body {
   border: none;
   border-radius: 10px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   padding: 12px 28px;
   cursor: pointer;
   transition: opacity 0.2s;
@@ -118,7 +118,7 @@ body {
   border: 1.5px solid #E8DFD0;
   border-radius: 10px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   padding: 11px 28px;
   cursor: pointer;
   transition: border-color 0.2s;
@@ -176,7 +176,7 @@ body {
   border: 1.5px solid #E8DFD0;
   border-radius: 10px;
   padding: 12px 16px;
-  font-size: 14px;
+  font-size: 15px;
   font-family: inherit;
   color: #111111;
   outline: none;
