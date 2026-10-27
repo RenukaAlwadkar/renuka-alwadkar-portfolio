@@ -1,16 +1,26 @@
-# React + Vite
+# Renuka Alwadkar - Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the repository for my personal portfolio! This project showcases my journey as a Computer Engineering student, freelance UI Designer, and full-stack developer. 
 
-Currently, two official plugins are available:
+## Tech Stack
+This portfolio is built using **React** and **Vite** for a fast, optimized, and modern web experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What's Inside
+* **Projects:** A showcase of my technical projects, including my work as a Smart India Hackathon (SIH) 2025 Winner and SIH 2024 Finalist.
+* **Experience & Skills:** Details on my freelance UI design experience, full-stack development, and DevOps learning journey.
+* **Certifications:** Highlights of my technical credentials, including my Microsoft, LinkedIn, and NPTEL Java programming certifications.
+* **Resume:** Easy access to my most up-to-date professional resume.
 
-## React Compiler
+## Local Development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+To run this project locally on your machine:
 
-## Expanding the ESLint configuration
+1. Clone the repository.
+2. Navigate to the project directory: 
+   `cd renuka-portfolio`
+3. Install the dependencies: 
+   `npm install`
+4. Start the development server: 
+   `npm run dev`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
