@@ -1,6 +1,6 @@
 [build]
   base = "renuka-portfolio"
-  publish = "renuka-portfolio/dist"
+  publish = "dist"
   command = "npm run build"
 
 [[redirects]]
