@@ -24,7 +24,7 @@ export const projectsData = [
     shortDesc: "Built an AI skilling platform using Next.js, Node.js, Vapi, and Twilio with REST APIs and webhooks for real-time voice assessments and job recommendations.",
     tech: ["Next.js", "Node.js", "REST APIs", "Webhooks"],
     github: "https://github.com/RenukaAlwadkar",
-    demo: "https://ai-voice-skilling-platform-renuka.netlify.app/",
+    // demo: "https://ai-voice-skilling-platform-renuka.netlify.app/",
     problem: "Lack of real-time interactive voice assessments in skilling platforms.",
     architecture: "Integrated Vapi and Twilio with REST APIs and webhooks to evaluate voice interactions.",
     contributions: [
@@ -40,7 +40,7 @@ export const projectsData = [
     shortDesc: "Built a responsive React.js/Tailwind dashboard to visualize real-time IoT environmental data and developed Node.js pipelines.",
     tech: ["React.js", "Node.js", "Tailwind CSS", "MQTT"],
     github: "https://github.com/RenukaAlwadkar",
-    demo: "https://your-live-project-link.com",
+    // demo: "https://your-live-project-link.com",
     problem: "Urban environments lack granular, real-time CO₂ tracking.",
     architecture: "End-to-end data pipeline collecting real-time sensor streams via MQTT.",
     contributions: [
